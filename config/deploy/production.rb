@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 set :application, "rhodes-pc-2"
 set :domain, "rhodes-pc.com"
-set :repository, "git@github.com:Unayung/rhodes-pc.git" # your ssh way in github.
+set :repository, "git@github.com:Unayung/rhodes-pc-2.git" # your ssh way in github.
 set :deploy_to, "/home/apps/rhodes-pc-2"
 role :app, domain
 role :web, domain
