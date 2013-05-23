@@ -1,5 +1,5 @@
-<header>
-  <div class="navbar navbar-fixed-top">
+<header id="hero">
+  <div class="navbar">
     <div class="navbar-inner top">
       <div class="container">
         <div class="span12">
@@ -8,22 +8,22 @@
         <% end %>
         </div>
       </div>
-      <div class="container">
-        <ul class="nav">
-          <li class="offset1 span3">
-            <%= link_to("People","#", :class => "nav-menu") %>
-          </li>
-          <li class="offset05 span3">
-            <%= link_to("What we do","#", :class => "nav-menu") %>
-          </li>
-          <li class="offset05 span3">
-            <%= link_to("Contact us","#", :class => "nav-menu") %>
-          </li>
-        </ul>
-      </div>
         <%# render :partial => "common/search_form" %>
-      </div>
     </div>
-    <%= yield :submenu %>
   </div>
 </header>
+<nav id="nav" class="">
+  <div class="container">
+    <ul class="nav">
+      <li class="offset1 span3">
+        <%= link_to("PEOPLE","#people", :class => "nav-menu scroll") %>
+      </li>
+      <li class="offset05 span3">
+        <%= link_to("WHAT WE DO","#what_we_do", :class => "nav-menu scroll") %>
+      </li>
+      <li class="offset05 span3">
+        <%= link_to("CONTACT US","#contact", :class => "nav-menu scroll") %>
+      </li>
+    </ul>
+  </div>
+</nav>

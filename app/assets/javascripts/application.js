@@ -7,3 +7,4 @@
 //= require jquery.prettyPhoto
 //= require jquery.fitvids
 //= require jquery.isotope.min
+//= require slide_to_fix

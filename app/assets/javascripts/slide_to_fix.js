@@ -1,35 +1,3 @@
-<div class="span12">
-  <section class="welcome-message">
-    <div class="container">
-      <div class="hero-unit">
-        <h3>Adding the Value in Your Innovation.</h3>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="span12">
-  <%= render partial: "common/slide" %>
-</div>
-<div class="span12">
-  <%= render partial: "common/team" %>
-</div>
-<div class="span12">
-  <%= render partial: "common/what_we_do" %>
-</div>
-<div class="span12">
-  <%= render partial: "common/contact_us" %>
-</div>
-<%= content_for :javascripts do %>
-<script type="text/javascript">
-$(document).ready(function () {
-  $('#myCarousel').oneCarousel({
-    easeIn: 'rotateIn',
-    interval: 5000,
-    pause: 'hover'
-  });
-  
-  $("a[rel^='prettyPhoto']").prettyPhoto();
-});
 $(document).ready( function() {
   // Calculate the height of the hero
   var headerHeight = $('#hero').outerHeight();
@@ -48,10 +16,9 @@ $(document).ready( function() {
     $('body').addClass('device ');
   }
 
-
   // Set up scroll to navigation
   $('#nav li a.scroll').on('click', scrollTo);
-  
+
 });
 
 function scrollTo(event) {
@@ -85,6 +52,3 @@ function stickyNav(headerHeight, nav, navHeight) {
     $('#main').css('marginTop', headerHeight);
   }
 }
-
-</script>
-<% end %>
