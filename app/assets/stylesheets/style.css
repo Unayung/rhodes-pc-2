@@ -896,9 +896,9 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .portfolio .portfolio-item .folio-body .folio-zoom:hover {
     background-color: rgba(215, 51, 0, 0.1);
 } 
-.portfolio-filter {
+/*.portfolio-filter {
     margin-bottom: 
-}
+}*/
       
 /* Clients */
 .clients .well {
