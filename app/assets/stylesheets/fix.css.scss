@@ -1,0 +1,25 @@
+.navbar-inner {
+  background-image: none;
+  background-color: white;
+}
+
+.welcome-message {
+  padding-top: 120px;
+  
+  h3 {
+   color: #214B85 !important;
+  }
+}
+
+ul.nav {
+  margin: 0px !important;
+  li {
+    a.nav-menu{
+      font-size: 22px;
+    }
+  }
+
+  li.offset05 {
+    margin-left: 50px;
+  }
+}
