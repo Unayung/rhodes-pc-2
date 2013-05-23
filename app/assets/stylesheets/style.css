@@ -3,7 +3,7 @@ body {
     font-size: 12px;
     color: rgb(102, 102, 102);
     font-family: 'Open Sans', sans-serif;
-    background-image: url("../assets/pattern_08.jpg")
+    /*background-image: url("../assets/pattern_08.jpg")*/
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;

@@ -2,8 +2,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require twitter/bootstrap/alert
-//= require twitter/bootstrap/carousel
+//= require bootstrap.min
 //= require jquery.onecarousel.min
 //= require jquery.prettyPhoto
 //= require jquery.fitvids
