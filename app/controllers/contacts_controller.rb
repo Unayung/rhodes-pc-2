@@ -5,8 +5,9 @@ class ContactsController < ApplicationController
     email = params[:email]
     message = params[:message]
 
-    ContactMailer.send_contact_form_to_admin(username, email, message)
+    ContactMailer.delay.send_contact_form_to_admin(username, email, message)
 
+    flash[:info] = "Message sent, we will contact with you later."
     redirect_to root_path
   end
 

@@ -99,5 +99,10 @@ end
 after "deploy:finalize_update", "my_tasks:symlink"
 after :deploy, "deploy:cleanup"
 
+require "delayed/recipes"
+
+after "deploy:stop", "delayed_job:stop"
+after "deploy:start", "delayed_job:start"
+after "deploy:restart", "delayed_job:restart"
 #after "deploy:restart", "sphinx:rebuild"
 #after "deploy:restart", "sphinx:restart"
