@@ -5,6 +5,7 @@ class ContactMailer < ActionMailer::Base
     @username = username
     @email = email
     @message = message
-    mail(:to => "unayung@gmail.com", :subject => "Message from website - Rhodes-pc")
+    mail(:to => "amanda@rhodes-pc.com", :subject => "Message Notification - Rhodes-pc")
+    # mail(:to => "unayung@gmail.com", :subject => "Message Notification - Rhodes-pc")
   end
 end
