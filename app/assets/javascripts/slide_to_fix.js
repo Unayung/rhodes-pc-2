@@ -43,12 +43,10 @@ function stickyNav(headerHeight, nav, navHeight) {
   if ($(window).scrollTop() >= headerHeight){
     // fix the nav to the top of the viewport
     nav.addClass('fixed');
-    $('#arrow a').attr('href', '#top');
-    $('#main').css('marginTop', headerHeight + navHeight);
+    $('section.welcome-message').css('marginTop', 60);
   } else {
     // when scroll up or less than aboveHeight
     nav.removeClass('fixed');
-    $('#arrow a').attr('href', '#looks');
-    $('#main').css('marginTop', headerHeight);
+    $('section.welcome-message').css('marginTop', 0);
   }
 }
