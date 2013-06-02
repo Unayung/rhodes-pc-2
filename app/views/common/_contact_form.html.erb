@@ -3,7 +3,7 @@
 <%= simple_form_for("", :url => send_form_information_contacts_path) do |f| %>
 <p><%= f.text_field("name", :placeholder => "Your Name ...") %></p>
 <p><%= f.text_field("email", :placeholder => "Your Email ...") %></p>
-<%= f.text_area("message", :as => :text, :placeholder => "Your Message ...") %>
+<%= f.text_area("message", :as => :text, :placeholder => "Your Message ...", :rows => 7) %>
 <div class="form-actions">
 <%= f.button(:submit, "Send", :disable_with => "Sending...", :class => "btn btn-large btn-primary pull-right") %>
 </div>
