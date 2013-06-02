@@ -2,10 +2,12 @@
   <div class="navbar">
     <div class="navbar-inner top">
       <div class="container">
-        <div class="span12">
-        <%= link_to(Setting.domain , :class => "brand" ) do %>
-        <%= image_tag("logo.png") %>
-        <% end %>
+        <div class="row">
+          <div class="span12">
+          <%= link_to(Setting.domain , :class => "brand" ) do %>
+          <%= image_tag("logo.png") %>
+          <% end %>
+          </div>
         </div>
       </div>
         <%# render :partial => "common/search_form" %>
@@ -14,16 +16,18 @@
 </header>
 <nav id="nav" class="">
   <div class="container">
+    <div class="row">
     <ul class="nav">
-      <li class="offset1 span3">
+      <!-- <li class="offset1 span3">
         <%= link_to("PEOPLE","#people", :class => "nav-menu scroll") %>
       </li>
       <li class="offset05 span3">
         <%= link_to("WHAT WE DO","#what_we_do", :class => "nav-menu scroll") %>
-      </li>
-      <li class="offset05 span3">
+      </li> -->
+      <li class="span12">
         <%= link_to("CONTACT US","#contact", :class => "nav-menu scroll") %>
       </li>
     </ul>
+    </div>
   </div>
 </nav>

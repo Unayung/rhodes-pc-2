@@ -3,4 +3,9 @@ RhodesPc2::Application.routes.draw do
 
   root :to => 'high_voltage/pages#show', :id => 'landing'
 
+  resources :contacts do
+    collection do
+      post "send_form_information"
+    end
+  end
 end

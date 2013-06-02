@@ -47,7 +47,7 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "auto-facebook"
 
-
+gem 'delayed_job_active_record'
 gem "hipchat"
 
 # Cache
