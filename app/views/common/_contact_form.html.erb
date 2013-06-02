@@ -1,5 +1,5 @@
-<h3>Contact Us</h3>
 <p>Use the form below to make a general enquiry, a request for service, or any other message for us. </p>
+<br>
 <%= simple_form_for("", :url => send_form_information_contacts_path) do |f| %>
 <p><%= f.text_field("name", :placeholder => "Your Name ...") %></p>
 <p><%= f.text_field("email", :placeholder => "Your Email ...") %></p>
