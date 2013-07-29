@@ -38,8 +38,9 @@ p.copyright {
 #nav {
   z-index:11;
   width:100%;
-  font-family:'brandon-grotesque', sans-serif;
-  font-weight:400; text-transform:uppercase;
+  // font-family:'brandon-grotesque', sans-serif;
+  // font-weight:400;
+  // text-transform:uppercase;
   box-shadow:0 0 3px rgba(0,0,0,.7);
   background-color: white;
 }
@@ -65,7 +66,7 @@ p.copyright {
   padding:20px 5px 20px;
   text-decoration:none;
   color:#777;
-  font-size:12px;
+  font-size:24px;
   letter-spacing:1px;
   -webkit-transition:all .2s;
 }
