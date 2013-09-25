@@ -102,3 +102,26 @@ hr {
     float: right;
   }
 }
+
+h3 {
+  span {
+    margin-left: 60px;
+    font-size: 14px;
+  }
+}
+
+div#news {
+  ul {
+    li {
+      font-size: 20px;
+    }
+  }
+}
+
+h1.news-title{
+  font-size: 20px;
+}
+
+span.news-author{
+  font-size: 16px;
+}

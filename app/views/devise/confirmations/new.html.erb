@@ -1,0 +1,21 @@
+<div class="span9">
+  <div class="box">
+    <h2>重寄帳號認證信</h2>
+    <hr>
+    <%= simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+      <%= f.error_notification %>
+
+        <%= f.input :email, :required => true %>
+
+      <div class="form-actions">
+        <%= f.button :submit, "確認重寄" %>
+      </div>
+    <% end %>
+    
+  </div>
+</div>
+<div class="span3">
+  <div class="box">
+<%= render :partial => "devise/shared/links" %>
+  </div>
+</di>

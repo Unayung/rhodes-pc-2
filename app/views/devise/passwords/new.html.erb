@@ -1,0 +1,21 @@
+<div id="forget-password-page" class="span6 offset3 basic-form-page">
+  <h2>忘記密碼</h2>
+  <div class="box form-container request-for-reset">
+    <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => "form-horizontal form-forget-password" }) do |f| %>
+          <%= f.error_notification %>
+          
+          <legend>請輸入註冊時的 E-Mail 以重設密碼</legend>
+          
+          <%= f.input :email, :required => true %>
+
+          <div class="control-group">
+            <div class="controls">
+              <%= f.button :submit, "送出密碼修改指示", :class => "btn btn-primary btn-submit" %>
+            </div>
+          </div>
+        <% end %>
+  </div>
+  <div class="bottom-options options-forget-password">
+    <%= render :partial => "devise/shared/links" %>
+  </div>
+</div>
