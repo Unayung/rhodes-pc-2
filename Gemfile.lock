@@ -225,9 +225,6 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    turbo-sprockets-rails3 (0.3.6)
-      railties (> 3.2.8, < 4.0.0)
-      sprockets (>= 2.0.0)
     tzinfo (0.3.37)
     uglifier (2.1.0)
       execjs (>= 0.3.0)
@@ -279,6 +276,5 @@ DEPENDENCIES
   simple_form (= 2.0.3)
   stringex
   tinymce-rails (= 3.5.8.3)
-  turbo-sprockets-rails3
   uglifier (>= 1.0.3)
   will_paginate (= 3.0.3)
