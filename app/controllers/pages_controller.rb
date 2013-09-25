@@ -2,7 +2,7 @@ class PagesController < HighVoltage::PagesController
   layout :layout_for_page
 
   def landing
-    @news = News.all
+    @news = News.this_month
   end
 
   protected

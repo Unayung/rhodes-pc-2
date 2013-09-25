@@ -7,7 +7,7 @@ RhodesPc2::Application.routes.draw do
   match "/pages/glenn", :id => 'glenn'
   match "/pages/heather", :id => 'heather'
 
-  get "/admin" => 'admin/news#new'
+  get "/admin" => 'admin/news#index'
 
   namespace :admin do
     resources :news

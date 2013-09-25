@@ -1,7 +1,10 @@
 <br>
 <div class="span12">
-  <h1 class="news-title"><%= @news.title %></h1>
-  <span class="news-author pull-right"><%= @news.author %></span>
+  <h1 class="news-title"><%= render_news_title(@news) %></h1>
+  <span class="news-author pull-right"><%= render_news_author(@news) %></span>
   <br>
-  <%= @news.content %>
+  <br>
+  <div class="news-content">
+    <%= render_news_content(@news) %>
+  </div>
 </div>

@@ -1,0 +1,8 @@
+theme_advanced_toolbar_location: top
+theme_advanced_toolbar_align: left
+theme_advanced_statusbar_location: false
+plugins:
+  - paste
+paste_remove_styles: false
+paste_text_sticky: true
+paste_text_sticky_default: true

@@ -113,15 +113,27 @@ h3 {
 div#news {
   ul {
     li {
-      font-size: 20px;
+      font-size: 18px;
+      margin-bottom: 18px;
     }
   }
 }
 
 h1.news-title{
-  font-size: 20px;
+  font-size: 24px;
 }
 
 span.news-author{
   font-size: 16px;
+}
+
+div.news-content{
+  font-size: 18px;
+  text-indent:36px;
+  line-height: 24px;
+
+  p{
+    margin-bottom: 24px;
+    text-align:justify;
+  }
 }
