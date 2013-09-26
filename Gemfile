@@ -39,7 +39,7 @@ gem "will_paginate", "3.0.3"
 
 gem "high_voltage"
 
-gem "airbrake"
+# gem "airbrake"
 # gem "turbo-sprockets-rails3"
 
 gem "rvm-capistrano"
@@ -50,7 +50,7 @@ gem "auto-facebook"
 
 gem 'delayed_job_active_record'
 gem "daemons"
-gem "hipchat"
+# gem "hipchat"
 
 # Cache
 gem "dalli"

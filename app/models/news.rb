@@ -1,5 +1,6 @@
 class News < ActiveRecord::Base
   attr_accessible :title, :author, :content
+  validates_presence_of :title, :content
   scope :this_month, where(:created_at => Date.today.beginning_of_month..Date.today.end_of_month)
 
   acts_as_url :title
