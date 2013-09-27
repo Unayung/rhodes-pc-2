@@ -1,0 +1,26 @@
+<div class="span10">
+
+  <h3>People List</h3>
+  <%= link_to("Add Person", new_admin_person_path, :class => "btn btn-info pull-right") %>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th width="200px">Name</th>
+        <th>Email</th>
+        <th width="100px">Title</th>
+        <th width="120px">Action</th>
+      </tr>
+    </thead>
+    <% @people.each do |person| %>
+    <tr>
+      <td><%= link_to(person.name, person_path(person), :target => "_blank" ) %></td>
+      <td><%= person.email %></td>
+      <td><%= person.title %></td>
+      <td>
+        <%= link_to("Edit", edit_admin_person_path(person), :class => "btn btn-warning btn-small") %>
+        <%= link_to("Delete", admin_person_path(person), :method => :delete, :confirm => "Are You Sure you want to delete ?", :class => "btn btn-danger btn-small") %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

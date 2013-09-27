@@ -3,7 +3,7 @@
 
 <%= render_hr %>
 <div class="span12" id="people">
-  <%= render partial: "common/people" %>
+  <%= render partial: "common/people", :locals => { :people => @people} %>
 </div>
 <%= render_hr %>
 <div class="span12" id="service">

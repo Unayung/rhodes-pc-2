@@ -1,4 +1,5 @@
 class Admin::NewsController < ApplicationController
+  layout "admin"
   before_filter :login_required
 
   def index
@@ -36,7 +37,7 @@ class Admin::NewsController < ApplicationController
   end
 
   def destroy
-    @news = News.find(params[:id])
+    @news = News.find_by_url(params[:id])
     @news.destroy
 
     redirect_to admin_news_index_path, :notice => "News Deleted"

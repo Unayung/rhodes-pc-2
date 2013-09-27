@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= render_page_title_tag %>
+    <%= render_page_description_meta_tag %>
+    <%= render_page_keywords_meta_tag %>
+    <%= render_page_image_link_tag %>
+    <%= csrf_meta_tag %>
+    <link href = 'http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,800' rel = 'stylesheet' type = 'text/css'>
+    <%= stylesheet_link_tag "application" %>
+    <%= yield :stylesheets %>
+    <meta property="og:title"       content="<%= page_title ||  SeoHelper.configuration.site_name %>"/>
+    <meta property="og:description" content="<%= page_description || SeoHelper.configuration.default_page_description %>"/>
+    <meta property="og:image:url"   content="<%= page_image ||  SeoHelper.configuration.default_page_image %>"/>
+  </head>
+  <%= render_body_tag %>
+    <header id="hero">
+      <div class="navbar">
+        <div class="navbar-inner top">
+          <div class="container">
+            <div class="row">
+              <div class="span12">
+              <%= link_to(Setting.domain , :class => "brand" ) do %>
+              <%= image_tag("logo.png") %>
+              <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <%= render :partial => "common/admin_sidebar" %>
+          <%= yield %>
+        </div> 
+      </div>
+    </div>
+    <%= render :partial => "common/footer" %>
+    <%= render :partial => "common/bootstrap_modal" %>    
+    <%= render :partial => "common/google_analytics" %>
+    <%= javascript_include_tag "application" %>
+    <%= yield :javascripts %>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<br>
+<div class="span12">
+<div class="row">
+  <div class="offset1 span4">
+    <%= image_tag(@person.full_photo.url) %>
+    <h3><%= @person.name %></h3>
+    <h4><%= mail_to(@person.email) %></h4>
+  </div>
+  <div class="offset1 span6">
+    <%= raw @person.description_up_right %>
+    <!-- <h4>Bar/Court Admissions</h4>
+    <ul>
+      <li>State Bar of California</li>
+      <li>State Bar of Texas</li>
+      <li>Federal Courts</li>
+      <li>Federal Circuit Bar</li>
+      <li>U.S. Supreme Court Bar</li>
+      <li>U.S. Patent & Trademark Office</li>
+      <li>Taipei Bar Association</li>
+    </ul>
+    <h4>Professional Organizations</h4>
+    <ul>
+      <li>American Bar Association</li>
+      <li>American Intellectual Property Association</li>
+      <li>American Society of International Law</li>
+      <li>Federal Bar Association</li>
+      <li>Licensing Executives Society</li>
+    </ul>
+    <h4>Education</h4>
+    <ul>
+      <li>J.D. University of Houston Law Center (1985) (With Honors)</li>
+      <li>William Jewell College, B.A. Chemistry (1982) magna cum laude</li>
+    </ul> -->
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="offset1 span11">
+    <%= raw @person.description_down_left %>
+  </div>
+</div>
+</div>

@@ -2,6 +2,7 @@ class PagesController < HighVoltage::PagesController
   layout :layout_for_page
 
   def landing
+    @people = Person.all
     @news = News.this_month
   end
 

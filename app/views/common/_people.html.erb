@@ -2,16 +2,13 @@
   <div class="span12">
     <h3>Our People</h3>
   </div>
-  <div class="offset3 span3">
-    <%= image_tag("rhodes.png", :width => 210, :height => 210) %>
-    <h4><%= link_to("Glenn W. Rhodes", pages_glenn_path, :target => "_blank") %></h4>
-    <p>Shareholder</p>
-
-  </div>
   <div class="span3">
-    <%= image_tag("heather.png", :width => 210, :height => 210) %>
-    <h4><%= link_to("Heather Fan", pages_heather_path, :target => "_blank") %></h4>
-    <p>Shareholder</p>
-    
   </div>
+  <% @people.each do |person| %>
+    <div class="span3">
+      <%= image_tag(person.thumb_photo.url, :width => 210, :height => 210) %>
+      <h4><%= link_to(person.name, person_path(person), :target => "_blank") %></h4>
+      <p><%= person.title %></p>
+    </div>
+  <% end %>
 </div>

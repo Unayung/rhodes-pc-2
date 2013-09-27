@@ -11,10 +11,12 @@ RhodesPc2::Application.routes.draw do
 
   namespace :admin do
     resources :news
+    resources :people
   end
 
   resources :news
-
+  resources :people
+  
   resources :contacts do
     collection do
       post "send_form_information"

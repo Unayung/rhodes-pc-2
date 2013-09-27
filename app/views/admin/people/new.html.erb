@@ -1,0 +1,16 @@
+<div class="span10">
+  <h3>Add Person</h3>
+  <%= simple_form_for([:admin, @person], :html => {:multipart => true}) do |f| %>
+  <%= f.input(:name) %>
+  <%= f.input(:title) %>
+  <%= f.input(:email) %>
+  <%= f.input(:thumb_photo, :label => "Thumb photo", :as => :file) %>
+  <%= f.input(:full_photo, :label => "Full photo", :as => :file) %>
+  <%= f.input(:description_up_right, :input_html => {:class => "tinymce", :style => "width:800px;"}) %>
+  <%= f.input(:description_down_left, :input_html => {:class => "tinymce", :style => "width:800px;"}) %>
+  <%= f.submit("Save", :class => "btn btn-info") %>
+  <%= link_to("Cancel", admin_people_path, :class => "btn btn-warning") %>
+  <% end %>
+</div>
+<%= tinymce_assets %>
+<%= tinymce theme: 'advanced' %>

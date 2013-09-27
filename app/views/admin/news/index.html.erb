@@ -1,16 +1,14 @@
-<br>
-<div class="span12">
-  <%= link_to("新增 News", new_admin_news_path, :class => "btn btn-info") %>
-  <%= link_to("Logout", destroy_user_session_path, :method => :delete, :class => "btn btn-danger") %>
-  
+<div class="span10">
+
   <h3>News List</h3>
+  <%= link_to("Add News", new_admin_news_path, :class => "btn btn-info pull-right") %>
   <table class="table table-bordered">
     <thead>
       <tr>
         <th width="200px">Title</th>
         <th width="100px">Author</th>
         <th>Content</th>
-        <th width="75px">Action</th>
+        <th width="120px">Action</th>
       </tr>
     </thead>
     <% @news.each do |news| %>
@@ -19,8 +17,8 @@
       <td><%= news.author %></td>
       <td><%= truncate(news.content, :length => 200).html_safe %></td>
       <td>
-        <%= link_to("Edit", edit_admin_news_path(news), :class => "btn btn-warning") %>
-        <%= link_to("Delete", admin_news_path(news), :method => :delete, :confirm => "Are You Sure you want to delete ?", :class => "btn btn-danger") %>
+        <%= link_to("Edit", edit_admin_news_path(news), :class => "btn btn-warning btn-small") %>
+        <%= link_to("Delete", admin_news_path(news), :method => :delete, :confirm => "Are You Sure you want to delete ?", :class => "btn btn-danger btn-small") %>
       </td>
     </tr>
     <% end %>
