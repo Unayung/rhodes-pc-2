@@ -6,9 +6,9 @@
   <%= f.input(:email) %>
   <%= f.input(:url, :label => "Page URL") %>
   <%= image_tag(@person.thumb_photo.url) if @person.thumb_photo.present? %>
-  <%= f.input(:thumb_photo, :label => "Thumb photo", :as => :file) %>
+  <%= f.input(:thumb_photo, :label => "Thumb photo ( 210px x 210px )", :as => :file) %>
   <%= image_tag(@person.full_photo.url) if @person.full_photo.present? %>
-  <%= f.input(:full_photo, :label => "Full photo", :as => :file) %>
+  <%= f.input(:full_photo, :label => "Full photo ( 280px x 385px )", :as => :file) %>
   <%= f.input(:description_up_right, :input_html => {:class => "tinymce", :style => "width:800px;"}) %>
   <%= f.input(:description_down_left, :input_html => {:class => "tinymce", :style => "width:800px;"}) %>
   <%= f.submit("Save", :class => "btn btn-info") %>
