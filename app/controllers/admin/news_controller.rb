@@ -1,7 +1,8 @@
 class Admin::NewsController < ApplicationController
   layout "admin"
   before_filter :login_required
-
+  before_filter :require_is_admin
+  
   def index
     @news = News.all
   end

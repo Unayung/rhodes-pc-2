@@ -12,7 +12,7 @@
       </div>
       
       <div class="control-group">
-        <%= f.label :password, "密碼", :class => "control-label" %>
+        <%= f.label :password, "Password", :class => "control-label" %>
         <div class="controls">
           <%= f.password_field :password, :required => false %>
         </div>
@@ -21,9 +21,9 @@
       <div class="control-group">
         <div class="controls">
           <label class="checkbox">
-            <%= f.check_box :remember_me if devise_mapping.rememberable? %> 記得我
+            <%= f.check_box :remember_me if devise_mapping.rememberable? %> Remember Me
           </label>
-          <%= button_tag("登入", :class => "btn btn-primary btn-submit") %>
+          <%= button_tag("Login", :class => "btn btn-primary btn-submit") %>
         </div>
       </div>
     <% end %>

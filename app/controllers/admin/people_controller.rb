@@ -1,7 +1,8 @@
 class Admin::PeopleController < ApplicationController
   layout "admin"
   before_filter :login_required
-
+  before_filter :require_is_admin
+  
   def index
     @people = Person.all
   end
