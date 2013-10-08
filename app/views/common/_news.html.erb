@@ -1,6 +1,6 @@
 <div class="row">
   <div class="span12">
-    <h3>Legal News and Updates <span> - <%= Date.today.strftime("%B") %> <%= Date.today.strftime("%Y") %></span></h3>
+    <h3>Legal News and Updates <span> - <%= @display_month %> <%= @year %></span></h3>
   </div>
   <div class="span12">
     <ul>
@@ -8,5 +8,11 @@
       <li><%= link_to(news.title, news_path(news), :target => :blank) %></li>
       <% end %>
     </ul>
+  </div>
+  <div class="span12">
+    <div class="btn-group pull-right">
+      <%= link_to("Previous", root_path(:month => @month.to_i.pred), :class => "btn btn-info") %>
+      <%= link_to("Next", root_path(:month => @month.to_i.next), :class => "btn btn-info") %>
+    </div>
   </div>
 </div>

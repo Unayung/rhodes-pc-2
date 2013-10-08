@@ -15,8 +15,7 @@
 class News < ActiveRecord::Base
   attr_accessible :title, :author, :content, :will_publish_at
   validates_presence_of :title, :content
-  # scope :this_month, where(:created_at => Date.today.beginning_of_month..Date.today.end_of_month)
-  scope :is_published, where(:will_publish_at => Date.today.beginning_of_month..Date.today.end_of_month)
+  scope :is_published, where("will_publish_at < ?", Date.today)
   acts_as_url :title
 
   auto_html_for :content do
@@ -29,4 +28,9 @@ class News < ActiveRecord::Base
     url # or whatever you set :url_attribute to
   end
 
+  def self.is_previous(month)
+    month_begin = "#{Date.today.year}-#{month}-1".to_date
+    month_end = month_begin.end_of_month
+    where(:will_publish_at => month_begin..month_end)
+  end
 end

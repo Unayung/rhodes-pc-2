@@ -4,7 +4,13 @@ class Admin::NewsController < ApplicationController
   before_filter :require_is_admin
   
   def index
-    @news = News.all
+    if params[:month].present?
+      @month = params[:month]
+    else
+      @month = Date.today.month
+    end
+    @year = Date.today.year
+    @news = News.is_previous(@month)
   end
 
   def new
