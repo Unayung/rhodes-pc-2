@@ -3,7 +3,7 @@ class PagesController < HighVoltage::PagesController
 
   def landing
     @people = Person.all
-    @news = News.this_month
+    @news = News.is_published
   end
 
   protected

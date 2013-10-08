@@ -3,6 +3,7 @@
   <%= simple_form_for([:admin, @news]) do |f| %>
   <%= f.input(:title) %>
   <%= f.input(:author) %>
+  <%= f.input(:will_publish_at) %>
   <%= f.input(:content, :input_html => {:class => "tinymce", :style => "width:800px;"}) %>
   <%= f.submit("Save", :class => "btn btn-info") %>
   <%= link_to("Cancel", admin_news_index_path, :class => "btn btn-warning") %>

@@ -2,14 +2,17 @@
 #
 # Table name: people
 #
-#  id               :integer          not null, primary key
-#  name             :string(255)
-#  title            :string(255)
-#  study_experience :string(255)
-#  work_experience  :string(255)
-#  email            :string(255)
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
+#  id                    :integer          not null, primary key
+#  name                  :string(255)
+#  title                 :string(255)
+#  email                 :string(255)
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#  description_up_right  :text
+#  description_down_left :text
+#  thumb_photo           :string(255)
+#  full_photo            :string(255)
+#  url                   :string(255)
 #
 
 # -*- encoding : utf-8 -*-
