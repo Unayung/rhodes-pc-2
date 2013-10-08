@@ -11,6 +11,9 @@ class PagesController < HighVoltage::PagesController
     @news = News.is_previous(@month).is_published
     @year = Date.today.year
     @display_month = "#{@year}-#{@month}-1".to_date.strftime("%B")
+
+    @has_next = News.is_previous(@month.to_i+1).is_published.any?
+    @has_previous = News.is_previous(@month.to_i-1).is_published.any?
   end
 
   protected
