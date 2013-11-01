@@ -2,7 +2,7 @@
   <h3>Add Event</h3>
   <%= simple_form_for([:admin, @event]) do |f| %>
   <%= f.input(:title) %>
-  <%= f.input(:event_file) %>
+  <%= f.input(:event_file, :label => "Choose Event PDF (Max file size 10MB)") %>
   <%= f.input(:will_publish_at) %>
   
   <%= f.submit("Save", :class => "btn btn-info") %>
