@@ -9,11 +9,15 @@ class PagesController < HighVoltage::PagesController
     end
     @people = Person.all
     @news = News.is_previous(@month).is_published
+    @events = Event.is_previous(@month).is_published
     @year = Date.today.year
     @display_month = "#{@year}-#{@month}-1".to_date.strftime("%B")
 
-    @has_next = News.is_previous(@month.to_i+1).is_published.any?
-    @has_previous = News.is_previous(@month.to_i-1).is_published.any?
+    @news_has_next = News.is_previous(@month.to_i+1).is_published.any?
+    @news_has_previous = News.is_previous(@month.to_i-1).is_published.any?
+
+    @events_has_next = Event.is_previous(@month.to_i+1).is_published.any?
+    @events_has_previous = Event.is_previous(@month.to_i-1).is_published.any?
   end
 
   protected

@@ -11,10 +11,16 @@ RhodesPc2::Application.routes.draw do
 
   namespace :admin do
     resources :news
+    resources :events
     resources :people
   end
 
   resources :news
+  resources :events do
+    member do
+      get "download"
+    end
+  end
   resources :people
   
   resources :contacts do

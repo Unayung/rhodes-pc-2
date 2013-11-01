@@ -1,0 +1,11 @@
+<div class="span10">
+  <h3>Add Event</h3>
+  <%= simple_form_for([:admin, @event]) do |f| %>
+  <%= f.input(:title) %>
+  <%= f.input(:event_file) %>
+  <%= f.input(:will_publish_at) %>
+  
+  <%= f.submit("Save", :class => "btn btn-info") %>
+  <%= link_to("Cancel", admin_events_path, :class => "btn btn-warning") %>
+  <% end %>
+</div>

@@ -1,20 +1,23 @@
 <div class="row">
   <div class="span12">
-    <h3>Legal News and Updates <span> - <%= @display_month %> <%= @year %></span></h3>
+    <h3>Events <span> - <%= @display_month %> <%= @year %></span></h3>
   </div>
   <div class="span12">
     <ul>
-      <% @news.each do |news| %>
-      <li><%= link_to(news.title, news_path(news), :target => :blank) %></li>
+      <% @events.each do |event| %>
+      <li>
+        <%= link_to(event.title, event_path(event.url), {:format => :pdf}, :target => :blank) %>
+        <%= link_to("Download PDF", download_event_path(event.url), :target => :blank, :class => "btn btn-warning pull-right") %>
+      </li>
       <% end %>
     </ul>
   </div>
   <div class="span12">
     <div class="btn-group pull-right">
-      <% if @news_has_previous %>
+      <% if @events_has_previous %>
         <%= link_to("Previous", root_path(:month => @month.to_i.pred), :class => "btn btn-info") %>
       <% end %>
-      <% if @news_has_next %>
+      <% if @events_has_next %>
         <%= link_to("Next", root_path(:month => @month.to_i.next), :class => "btn btn-info") %>
       <% end %>
     </div>

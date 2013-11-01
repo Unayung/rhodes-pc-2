@@ -15,7 +15,7 @@
 class News < ActiveRecord::Base
   attr_accessible :title, :author, :content, :will_publish_at
   validates_presence_of :title, :content
-  scope :is_published, where("will_publish_at < ?", Date.today)
+  scope :is_published, where("will_publish_at <= ?", Date.today)
   acts_as_url :title
 
   auto_html_for :content do

@@ -53,4 +53,6 @@ RhodesPc2::Application.configure do
     :password             => Setting.email_password,
     :enable_starttls_auto => true
   }
+
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 end
