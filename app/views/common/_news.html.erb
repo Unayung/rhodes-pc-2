@@ -1,6 +1,6 @@
 <div class="row">
   <div class="span12">
-    <h3>Legal News and Updates <span> - <%= @display_month %> <%= @year %></span></h3>
+    <h3>Legal News and Updates <span> - <%= @display_date %></span></h3>
   </div>
   <div class="span12">
     <ul>
@@ -11,12 +11,12 @@
   </div>
   <div class="span12">
     <div class="btn-group pull-right">
-      <% if @news_has_previous %>
-        <%= link_to("Previous", root_path(:month => @month.to_i.pred), :class => "btn btn-info") %>
-      <% end %>
-      <% if @news_has_next %>
-        <%= link_to("Next", root_path(:month => @month.to_i.next), :class => "btn btn-info") %>
-      <% end %>
+      <%# if @news_has_previous %>
+        <%# link_to("Previous", root_path(:month => @previous_month), :class => "btn btn-info") %>
+      <%# end %>
+      <%# if @news_has_next %>
+        <%# link_to("Next", root_path(:month => @next_month), :class => "btn btn-info") %>
+      <%# end %>
     </div>
   </div>
 </div>
