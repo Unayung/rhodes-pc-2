@@ -1,0 +1,20 @@
+<br>
+<div class="span12">
+  <h2>Events</h2>
+</div>
+<div class="span12">
+  <hr>
+</div>
+<div class="span12" id="news">
+  <ul>
+    <% @events.each do |event| %>
+    <li><%= link_to(event.title, event_path(event), :target => :blank) %></li>
+    <% end %>
+  </ul>
+</div>
+<div class="span12">
+  <hr>
+  <div class="pull-right">
+  <%= will_paginate @events %>
+  </div>
+</div>
