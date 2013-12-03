@@ -10,6 +10,10 @@ class Event < ActiveRecord::Base
     url # or whatever you set :url_attribute to
   end
 
+  def self.latest_ten
+    last(10).reverse
+  end
+
   def self.is_previous(month)
     month_begin = "#{Date.today.year}-#{month}-1".to_date
     month_end = month_begin.end_of_month

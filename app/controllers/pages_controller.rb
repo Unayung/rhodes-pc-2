@@ -20,8 +20,9 @@ class PagesController < HighVoltage::PagesController
       @previous_month = (DateTime.now - 1.month).month
     end
     @people = Person.all
-    @news = News.is_previous(@month).is_published
-    @events = Event.is_previous(@month).is_published
+    # @news = News.is_previous(@month).is_published
+    @news = News.latest_ten
+    @events = Event.latest_ten
     @year = Date.today.year
     @display_date = "#{Date.today.strftime("%B")} #{Date.today.strftime("%Y")}"
     # @display_month = "#{@year}-#{@month}-1".to_date.strftime("%B")

@@ -24,6 +24,10 @@ class News < ActiveRecord::Base
     simple_format
   end
 
+  def self.latest_ten
+    last(10).reverse
+  end
+
   def to_param
     url # or whatever you set :url_attribute to
   end
