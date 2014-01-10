@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'tinymce-rails', "3.5.8.3"
 gem 'stringex' # for english uri
 gem "auto_html"
+gem "galetahub-simple_captcha", :require => "simple_captcha"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

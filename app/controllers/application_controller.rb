@@ -1,7 +1,8 @@
 # -*- encoding : utf-8 -*-
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
+  include SimpleCaptcha::ControllerHelpers
+  
   def login_required
     if current_user.blank?
       respond_to do |format|
